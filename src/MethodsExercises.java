@@ -1,46 +1,58 @@
 import java.util.Scanner;
 
-import static java.lang.Integer.getInteger;
-
 public class MethodsExercises {
-
+public static Scanner sc = new Scanner(System.in);
         public static void main(String[] args) {
 
-            addMath(3, 7);
-            subtMath(10, 5);
-            multMath(4, 8);
-            divMath(30, 5);
+//            addMath(3, 7);
+//            subtMath(10, 5);
+//            multMath(4, 8);
+//            divMath(30, 5);
 //            modMath(10, 2);
 //            int getRange = range(3, 40);
 //            System.out.println(getRange);
-            factorial(int num);
+//            factorial(int num);
+
+            String userResp;
+            do{
+                System.out.print("How many sides should the dice have: ");
+                int userInput = sc.nextInt();
+                System.out.print("Roll the dice? (y/n): ");
+                String userChoice = sc.next();
+                if (userChoice.equalsIgnoreCase("y")){
+                    System.out.println("First result: " + dice(userInput));
+                    System.out.println("Second result: " + dice(userInput));
+                }
+                System.out.print("Continue? (y/n): ");
+                userResp = sc.next();
+            } while (userResp.equalsIgnoreCase("y"));
         }
 
 // #1 Create four separate methods. Each will perform an arithmetic operation:
 //
 //    Addition
 
-        public static void addMath(int a, int b) {
-            System.out.println(a * b);
-        }
+//        public static void addMath(int a, int b) {
+//            System.out.println(a * b);
+//        }
 
 //    Subtraction
 
-        public static void subtMath(int a, int b) {
-            System.out.println(a - b);
-        }
+//        public static void subtMath(int a, int b) {
+//            System.out.println(a - b);
+//        }
 
 //    Multiplication
 
-        public static void multMath(int a, int b) {
-            System.out.println(a * b);
-        }
+//        public static void multMath(int a, int b) {
+//            System.out.println(a * b);
+//        }
 
 //    Division
 
-        public static void divMath(int a, int b) {
-            System.out.println(b / a);
-        }
+//        public static void divMath(int a, int b) {
+//            System.out.println(b / a);
+//        }
 
 //    Each function needs to take two parameters/arguments so that the operation can be performed.
 //    Test your methods and verify the output.
@@ -90,18 +102,23 @@ public class MethodsExercises {
 //          2! = 1 x 2           = 2
 //          3! = 1 x 2 x 3       = 6
 //          4! = 1 x 2 x 3 x 4   = 24
-    private static Scanner factScanner = new Scanner(System.in){
-    public static int factorial(int num){
-        System.out.print("Enter a number between 1 and 10: ");
-        long factNum = 1;
-        if (factNum >= 1 && factNum <=10) {
-            for(int i = 1; i <= num; i++){
-                factNum *= i;
-            }
-        } else {
-            System.out.println("Enter a number between 1 and 10: ");
-        }
-        return factorial();
+//    private static Scanner factScanner = new Scanner(System.in){
+//    public static int factorial(int num){
+//        System.out.print("Enter a number between 1 and 10: ");
+//        long factNum = 1;
+//        if (factNum >= 1 && factNum <=10) {
+//            for(int i = 1; i <= num; i++){
+//                factNum *= i;
+//            }
+//        } else {
+//            System.out.println("Enter a number between 1 and 10: ");
+//        }
+//        return factorial();
+//    }
+
+    public static int dice(int n){
+        double dollRoll = Math.floor(Math.random() * n + 1);
+        int intRoll = (int)dollRoll;
+        return intRoll;
     }
-    };
-}
+    }
