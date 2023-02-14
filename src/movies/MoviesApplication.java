@@ -21,11 +21,11 @@ public class MoviesApplication {
             // 3. do whatever the choice is
             // until the user enters choice 0
         System.out.println("See all movies, or sort by category? (M/C)");
+        String response = input.getString();
         do{
             if (response.equalsIgnoreCase("M")) {
-
-
-            }
+                System.out.println(Movie.name);
+            } else System.out.println(Movie.category);
         } while(true);
             // 1. print the menu
             printMenu();
