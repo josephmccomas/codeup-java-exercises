@@ -28,12 +28,12 @@ public class Input {
         System.out.println(prompt);
         return yesNo();
     }
-    public int getInt(){
+    public int getInt(int i, int i1, String s){
     return sc.nextInt();
     }
     public int getInt(int min, int max){
         System.out.printf("Enter a number between $d and %d%n", min, max);
-        int anInt = getInt();
+        int anInt = getInt(0, 5, "Enter your choice: ");
         if (anInt < min || anInt > max){
             System.out.printf("That was not between %d and %d%n!!", min, max);
             return getInt(min, max);
