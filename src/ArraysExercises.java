@@ -19,13 +19,12 @@ addPeople();
 //        It should return an array whose length is 1 greater than the passed array, with the passed person object at the end of the array.
     public static String[] addPeople(){
         String tom = "Tom";
-        String [] morePeople = Arrays.copyOf(people, 4);
+        String [] morePeople = Arrays.copyOf(people, people.length + 1);
         for (int i = 0; i < people.length; i++) {
             morePeople[i] = people[i];
             morePeople[3] = tom;
         }
         System.out.println(Arrays.toString(morePeople));
         return morePeople;
-
     }
 }

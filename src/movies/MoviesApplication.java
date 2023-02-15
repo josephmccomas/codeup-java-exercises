@@ -40,11 +40,10 @@ public class MoviesApplication {
             if(choice == 0) {
                 break;
             }
-        }
-
         System.out.println("Bye");
 
     }
+}
 
     private static void printMenu() {
         System.out.println("Menu goes here");

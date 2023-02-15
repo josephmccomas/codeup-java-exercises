@@ -4,9 +4,9 @@ public class Movie {
 //    Create a class named Movie. It should have private fields for name and category, and a constructor that sets both of these.
 //    Create methods to access these properties and change them (getters and setters).
 
-    private String name;
+    public static String name;
 
-    private String category;
+    public static String category;
 
     public Movie(String name, String category) {
         this.name = name;

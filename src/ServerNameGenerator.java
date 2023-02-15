@@ -2,8 +2,8 @@ import java.util.Random;
 
 public class ServerNameGenerator {
 
-    static String [] adjectives = {"heavy", "light", "dark", "bright", "warm", "cold", "young", "old", "worn", "tight"};
-    static String [] nouns = {"mother", "father", "sister", "brother", "dog", "cat", "rat", "bird", "bill", "girl"};
+    private static String [] adjectives = {"heavy", "light", "dark", "bright", "warm", "cold", "young", "old", "worn", "tight"};
+    private static String [] nouns = {"mother", "father", "sister", "brother", "dog", "cat", "rat", "bird", "bill", "girl"};
 
 
     //Create two arrays whose elements are strings: one with at least 10 adjectives, another with at least 10 nouns.
@@ -23,7 +23,7 @@ public class ServerNameGenerator {
     public static void main(String[] args) {
         String rando1 = getRandAdj();
         String rando2 = getRandNoun();
-        System.out.println("Here is your server name: " + rando1 + "-" + rando2);
+        System.out.printf("Here is your server name: " + rando1 + "-" + rando2);
     }
 
 //Example Output:
