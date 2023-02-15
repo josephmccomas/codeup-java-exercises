@@ -72,10 +72,10 @@ private static Input input = new Input();
             case 5 -> {
                 viewMoviesByCategory("comedy");
             }
-//            case 6 -> {
-//                input.getString();
-//                addMovie();
-//            }
+            case 6 -> {
+                input.getString();
+                addMovie();
+            }
             // ...
         }
     }
@@ -90,11 +90,11 @@ private static Input input = new Input();
         }
     }
 
-//    public static void addMovie(){
-//        String movieName = input.getString("Enter movie name: ");
-//        String movieCategory = input.getString("Enter movie category: ");
-//        Movie movie = new Movie(movieName, movieCategory);
-//        movies = Arrays.copyOf(movies, movies.length +1);
-//        movies[movies.length -1] = movie;
-//    }
+    public static void addMovie(){
+        String movieName = input.getString("Enter movie name: ");
+        String movieCategory = input.getString("Enter movie category: ");
+        Movie movie = new Movie(movieName, movieCategory);
+        movies = Arrays.copyOf(movies, movies.length +1);
+        movies[movies.length -1] = movie;
+    }
 }
