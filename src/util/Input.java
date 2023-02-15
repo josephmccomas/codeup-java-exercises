@@ -28,24 +28,28 @@ public class Input {
         System.out.println(prompt);
         return yesNo();
     }
-    public int getInt(int i, int i1, String s){
-    return sc.nextInt();
+    public int getInt(int min, int max, String userInput){
+        System.out.println(userInput);
+    return getInt(min, max);
     }
     public int getInt(int min, int max){
-        System.out.printf("Enter a number between $d and %d%n", min, max);
-        int anInt = getInt(0, 5, "Enter your choice: ");
+//        System.out.printf("Enter a number between $d and %d%n", min, max);
+        int anInt = getInt();
         if (anInt < min || anInt > max){
             System.out.printf("That was not between %d and %d%n!!", min, max);
             return getInt(min, max);
         }
         return anInt;
     }
-    public int getDouble(){
+    public int getInt(){
         return sc.nextInt();
     }
-    public int getDouble(int min, int max){
+    public double getDouble() {
+        return sc.nextDouble();
+    }
+        public double getDouble(double min, double max){
         System.out.printf("Enter a number between $f and %f%n", min, max);
-        int aDouble = getDouble();
+        double aDouble = getDouble();
         if (aDouble < min || aDouble > max){
             System.out.printf("That was not between %f and %f%n!!", min, max);
             return getDouble(min, max);
@@ -60,7 +64,7 @@ public class Input {
         int x = myInput.getInt(5, 10);
         System.out.println(x);
 
-        int y = myInput.getDouble(5, 10);
+        double y = myInput.getDouble(5, 10);
         System.out.println(y);
 
         myInput.getString();

@@ -36,8 +36,8 @@ private static Input input = new Input();
             if(choice == 0) {
                 break;
             }
-        System.out.println("Bye");
         } while(true);
+        System.out.println("Bye");
 
     }
 
@@ -56,46 +56,45 @@ private static Input input = new Input();
 
 
     private static void doChoice(int choice) {
-        switch(choice) {
-            case 1:
+        switch (choice) {
+            case 1 ->
                 // call function to view all movies
-                viewAllMovies();
-                break;
-            case 2:
+                    viewAllMovies();
+            case 2 -> {
                 viewMoviesByCategory("animated");
-                break;
-            case 3:
+            }
+            case 3 -> {
                 viewMoviesByCategory("drama");
-                break;
-            case 4:
+            }
+            case 4 ->  {
                 viewMoviesByCategory("musical");
-                break;
-            case 5:
+            }
+            case 5 -> {
                 viewMoviesByCategory("comedy");
-                break;
-            case 6:
-                input.getString();
-                addMovie();
-                break;
+            }
+//            case 6 -> {
+//                input.getString();
+//                addMovie();
+//            }
             // ...
         }
     }
     private static void viewAllMovies(){
         System.out.println(Arrays.toString(movies));
     }
-    private static String viewMoviesByCategory(String args) {
+    private static void viewMoviesByCategory(String category) {
         for (int i = 0; i < movies.length; i++) {
-            return String.valueOf(movies[i]);
-
+            if (movies[i].getCategory().equals(category)) {
+                System.out.println(movies[i]);
+            }
         }
-        return args;
     }
 
-    public static void addMovie(){
-        String movieName = input.getString("Enter movie name: ");
-        String movieCategory = input.getString("Enter movie category: ");
-        Movie movie = new Movie(movieName, movieCategory);
-        movies = Arrays.copyOf(movies, movies.length +1);
-        movies[movies.length -1] = movie;
-    }
+//    public static void addMovie(){
+//        String movieName = input.getString("Enter movie name: ");
+//        String movieCategory = input.getString("Enter movie category: ");
+//        Movie movie = new Movie(movieName, movieCategory);
+//        movies = Arrays.copyOf(movies, movies.length +1);
+//        movies[movies.length -1] = movie;
+//    }
 }

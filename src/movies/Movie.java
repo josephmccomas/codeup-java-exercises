@@ -4,9 +4,9 @@ public class Movie {
 //    Create a class named Movie. It should have private fields for name and category, and a constructor that sets both of these.
 //    Create methods to access these properties and change them (getters and setters).
 
-    public static String name;
+    public String name;
 
-    public static String category;
+    public String category;
 
     public Movie(String name, String category) {
         this.name = name;
@@ -15,6 +15,11 @@ public class Movie {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return name + " -- " + category;
     }
 
     public void setName(String name) {
