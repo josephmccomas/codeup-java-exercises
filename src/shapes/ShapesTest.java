@@ -18,11 +18,18 @@ public class ShapesTest {
         Rectangle box1 = new Rectangle(5, 4);
         System.out.printf("Area: %f%n, Perimeter: %f%n", box1.getArea(), box1.getPerimeter());
 
-        Rectangle box2 = new Square(5);
-        System.out.printf("Area: %f%n, Perimeter: %f%n", box2.getArea(), box2.getPerimeter());
+//        Rectangle box2 = new Square(5);
+//        System.out.printf("Area: %f%n, Perimeter: %f%n", box2.getArea(), box2.getPerimeter());
+
+//        Measurable myShape = new Rectangle(3, 6);
+//        System.out.printf("Measurable %f", myShape.getArea());
+
+        Measurable myShape = new Square(3);
+        System.out.printf("Measurable %f", myShape.getArea());
 
 
-//        int[] box1 = {4, 5};
-//        int box2 = 5;
+//        Test your code by creating instances of both Square and Rectangle and assigning them to myShape so you can display the shape's area and perimeter.
+//        Rectangle myShape = new Rectangle(3, 6);
+
     }
 }

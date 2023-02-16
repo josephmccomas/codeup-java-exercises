@@ -1,6 +1,6 @@
 package shapes;
 
-public class Rectangle {
+public class Rectangle extends Quadrilateral implements Measurable {
 
 //    Create two methods on the Rectangle class, getArea and getPerimeter that return the respective values. The formulas for both follow:
 //
@@ -37,6 +37,7 @@ public class Rectangle {
     }
 
     public Rectangle(double length, double width) {
+        super();
         this.length = length;
         this.width = width;
     }
