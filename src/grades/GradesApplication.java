@@ -7,7 +7,7 @@ import java.util.Map;
 public class GradesApplication {
 
     public static void main(String[] args) {
-        HashMap<String, HashMap<String, List>> students = new HashMap<>();
+        HashMap<String, Map<String, List>> students = new HashMap<>();
         students.put("John", "BigJohn", 70);
 //        students.add("Grade", "70");
 //        students.add("Grade", "80");
