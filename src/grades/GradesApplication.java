@@ -1,14 +1,12 @@
 package grades;
 
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class GradesApplication {
 
     public static void main(String[] args) {
-        HashMap<String, Map<String, List>> students = new HashMap<>();
-        students.put("John", "BigJohn", 70);
+        HashMap<String, String> students = new HashMap<>();
+        students.put("John", "BigJohn");
 //        students.add("Grade", "70");
 //        students.add("Grade", "80");
 //        students.add("Grade", "90");

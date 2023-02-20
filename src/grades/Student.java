@@ -9,6 +9,8 @@ public class Student {
     private ArrayList<Integer> grades = new ArrayList<>();
 
     private static int avjGrade = 0;
+    static int sumGrade = 0;
+
 
     public Student(String[] name) {
         Student.name = name;
@@ -20,22 +22,23 @@ public class Student {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> grades = new ArrayList<>();
 
         name = new String[]{"John", "Tim", "Steve"};
         System.out.println(Arrays.toString(name));
 
+        ArrayList<Integer> grades = new ArrayList<>();
         grades.add(88);
         grades.add(82);
         grades.add(91);
         System.out.println(grades);
 
-        int sum = 0;
         for (int i = 0; i < grades.size(); i++) {
-            sum += grades.get(i);
-            avjGrade = sum / grades.size();
-            System.out.println(avjGrade);
+            sumGrade += grades.get(i);
+            sumGrade++;
+            avjGrade = sumGrade / grades.size();
         }
+        System.out.println(avjGrade);
+
     }
 
 }
