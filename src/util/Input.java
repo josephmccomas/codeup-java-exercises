@@ -74,9 +74,10 @@ public class Input {
     }
     public int getHex(){
         int userHex = 0;
+        String s = getString();
         try {
-
-        } catch (NumberFormatException){
+            userHex = Integer.valueOf(userHex);
+        } catch (NumberFormatException userInput){
             System.out.println("Exception triggered.");
         }
         return getHex();
