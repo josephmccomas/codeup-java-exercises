@@ -5,10 +5,10 @@ package grades;
 // and that your getGradeAverage method correctly returns the average of the student's grades.
 public class StudentTest {
     public static void main(String[] args) {
-        Student(){
-            this.name = "Frank";
+//        Student(){
+//            this.name = "Frank";
 
-        }
+//        }
 
     }
 }

@@ -42,10 +42,44 @@ public class Input {
         return anInt;
     }
     public int getInt(){
+        int userInt = 0;
+        try {
+            Integer.valueOf(userInt);
+            System.out.println("Please enter an integer.");
+        }catch (NumberFormatException userInput) {
+            System.out.println("Exception triggered.");
+        }
         return sc.nextInt();
+
     }
     public double getDouble() {
+        double userDouble = 0;
+        try{
+            Double.valueOf(userDouble);
+            System.out.println("Please enter a double.");
+        } catch (NumberFormatException userInput){
+            System.out.println("Exception triggered.");
+        }
         return sc.nextDouble();
+    }
+    public int getBinary(){
+        int userBinary = 0;
+        try{
+
+            userBinary = Integer.valueOf(userBinary);
+        } catch (NumberFormatException userInput){
+            System.out.println("Exception triggered.");
+        }
+        return getBinary();
+    }
+    public int getHex(){
+        int userHex = 0;
+        try {
+
+        } catch (NumberFormatException){
+            System.out.println("Exception triggered.");
+        }
+        return getHex();
     }
         public double getDouble(double min, double max){
         System.out.printf("Enter a number between $f and %f%n", min, max);
@@ -57,8 +91,15 @@ public class Input {
         return aDouble;
     }
 
+    public Input(Scanner sc) {
+        this.sc = sc;
+    }
+
     public static void main(String[] args) {
         Input myInput = new Input();
+
+
+
         System.out.println(myInput.getString());
 
         int x = myInput.getInt(5, 10);
@@ -71,5 +112,10 @@ public class Input {
 
         myInput.yesNo("Continue Y/N? ");
         System.out.print("Sike!!");
+    }
+
+    public Integer getInt(String prompt) {
+        System.out.println(prompt);
+        return null;
     }
 } // END CLASS

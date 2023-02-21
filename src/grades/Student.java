@@ -27,6 +27,7 @@ public class Student {
         System.out.println(Arrays.toString(name));
 
         ArrayList<Integer> grades = new ArrayList<>();
+//        Arrays.asList(88, 82, 91);
         grades.add(88);
         grades.add(82);
         grades.add(91);
