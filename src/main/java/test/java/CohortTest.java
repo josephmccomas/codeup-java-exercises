@@ -8,19 +8,15 @@ public class CohortTest {
     @Before
     public void setUp() throws Exception {
     }
-
     @Test
     public void getCohortAverage() {
     }
-
     @Test
     public void addStudent() {
     }
-
     @Test
     public void getStudents() {
     }
-
     @Test
     public void setStudents() {
     }

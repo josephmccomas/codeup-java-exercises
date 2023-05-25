@@ -2,44 +2,41 @@ package grades;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
 public class Student {
-
-    private static String[] name;
-    private ArrayList<Integer> grades = new ArrayList<>();
-
+    private long id;
+    private String name;
+    private ArrayList<Integer> grades;
     private static int avjGrade = 0;
     static int sumGrade = 0;
-
-
-    public Student(String[] name) {
-        Student.name = name;
-    }
-
     public Student(ArrayList<Integer> grades) {
         this.grades = grades;
     }
 
-    public static void main(String[] args) {
-
-
-        name = new String[]{"John", "Tim", "Steve"};
-        System.out.println(Arrays.toString(name));
-
-        ArrayList<Integer> grades = new ArrayList<>();
-//        Arrays.asList(88, 82, 91);
-        grades.add(88);
-        grades.add(82);
-        grades.add(91);
-        System.out.println(grades);
-
-        for (int i = 0; i < grades.size(); i++) {
-            sumGrade += grades.get(i);
-            sumGrade++;
-            avjGrade = sumGrade / grades.size();
-        }
-        System.out.println(avjGrade);
-
+    public Student(long id, String name) {
+        this.id = id;
+        this.name = name;
+        this.grades = new ArrayList<>();
     }
 
+    public long getId() {
+        return this.id;
+    }
+    public String getName() {
+        return this.name;
+    }
+    public ArrayList<Integer> getGrades() {
+        return this.grades;
+    }
+    public void addGrade(int grade) {
+        this.grades.add(grade);
+    }
+    public double getGradeAverage() {
+        double sum = 0;
+        for (int grade: this.grades) {
+            sum += grade;
+        }
+        return sum / this.grades.size();
+    }
 }
